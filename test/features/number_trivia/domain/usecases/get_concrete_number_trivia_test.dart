@@ -29,7 +29,7 @@ void main() {
 
     //act
 
-    final result = await usecase(number: tNumber);
+    final result = await usecase(Params(number: tNumber));
 
     //assert
 
