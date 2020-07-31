@@ -29,13 +29,13 @@ void main() {
       print(jsonMap.toString());
       expect(result, tNumberTriviaModel);
     });
-    // test(
-    //     'should return a valid object when the JSON number is regarded as string',
-    //     () async {
-    //   Map<String, dynamic> jsonMap = json.decode(fixture('trivia_string.json'));
-    //   final result = NumberTriviaModel.fromJson(jsonMap);
-    //   print(jsonMap.toString());
-    //   expect(result, tNumberTriviaModel);
-    // });
+  });
+
+  group('toJson', () {
+    test('should return a json object of numbertrivia model', () async {
+      final result = tNumberTriviaModel.toJson();
+      expect(result,
+          {"text": "1 is the number that spells  in leetspeak.", "number": 1});
+    });
   });
 }
